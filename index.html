@@ -1,0 +1,24 @@
+---
+layout: default
+title: Home
+---
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h2 style="color:black;">&nbsp;</h2>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <h2>Index</h2>
+{% for lecture in site.categories.lectures  %}  
+          <div class="lecture">
+            <h4><a href={{ lecture.url }}>{{ lecture.title }}</a></h4>
+            <span class="date">{{ lecture.date | date_to_string }}</span>
+            <div class="entry">{{ lecture.excerpt }}</div>
+          </div>
+{% endfor %}
+        </div> <!-- end span -->
+      </div> <!-- end div -->
+      <div class="alert alert-info">
+        <h4><a style="color:black;" href="http://groups.google.com/group/djangoseattle">Sign up for the Django-Seattle (Google Group)</a></h4>
+      </div>

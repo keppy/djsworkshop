@@ -1,0 +1,20 @@
+---
+layout: default
+title: Exercises
+weight: 1
+permalink: /
+---
+
+     <h2>Exercises</h2>
+{% for exercise in site.categories.exercises %}
+      <div class="row">
+        <div class="span12">
+          <div class="event">
+            <h3><a href={{ exercise.url }}>{{ exercise.title }}</a></h3>
+            <span class="date">{{ exercise.date | date_to_string }}</span>
+            <div class="entry">{{ exercise.content }}</div>
+          </div>
+        </div>
+      </div>
+{% endfor %}
+
