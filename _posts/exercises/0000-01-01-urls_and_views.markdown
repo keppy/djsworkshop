@@ -1,5 +1,5 @@
 ---
-layout: exercises 
+layout: exercise
 title: Django Urls and Views
 category: exercises
 ---
