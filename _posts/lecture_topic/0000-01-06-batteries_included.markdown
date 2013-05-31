@@ -1,10 +1,10 @@
 ---
-layout: topic
-title: Django Urls and Views
-categories : [ 'topics', 'exercises', 'lectures' ]
-permalink : /topics/urls_and_views
-exercise_id : /exercises/urls_and_views
-lecture_id : /lectures/urls_and_views
+layout: lecture_topic
+title: Django Batteries Included
+categories : 'lecture_topics'
+permalink : /lecture-topics/batteries_included
+exercise_id : /exercises/batteries_included
+lecture_id : /lectures/batteries_included
 ---
 
 __Lecture__

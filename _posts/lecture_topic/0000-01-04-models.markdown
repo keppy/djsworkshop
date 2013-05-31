@@ -1,0 +1,25 @@
+---
+layout: lecture_topic
+title: Django Models
+categories : 'lecture_topics'
+permalink : /lecture-topics/models
+exercise_id : /exercises/models
+lecture_id : /lectures/models
+---
+
+__Lecture__
+{% for lect in site.categories.lectures %}
+{% if lect.id == page.lecture_id %}
+[{{lect.title}}]({{lect.url}})
+{% endif %} 
+
+{% endfor %}
+
+   __Exercise__
+{% for exer in site.categories.exercises %}
+{% if exer.id == page.exercise_id %}
+[{{exer.title}}]({{ exer.url }})
+{% endif %} 
+{% endfor %}
+
+
