@@ -9,16 +9,20 @@ title: Home
 
       <div class="row">
         <div class="span12">
-          <h2>Index</h2>
-{% for lecture in site.categories.lectures  %}  
-          <div class="lecture">
-            <h4><a href={{ lecture.url }}>{{ lecture.title }}</a></h4>
-            <span class="date">{{ lecture.date | date_to_string }}</span>
-            <div class="entry">{{ lecture.excerpt }}</div>
-          </div>
+          <h2>Workshop Index</h2>
+{% for topic in site.categories.topics %}  
+          <ol>
+              <li>
+              <div class="topic">
+                <h4><a href={{ topic.url }}>{{ topic.title }}</a></h4>
+              </div>
+              </li>
+          </ol>
 {% endfor %}
         </div> <!-- end span -->
-      </div> <!-- end div -->
+      </div> <!-- end row -->
+
+      <br/>
       <div class="alert alert-info">
         <h4><a style="color:black;" href="http://groups.google.com/group/djangoseattle">Sign up for the Django-Seattle (Google Group)</a></h4>
       </div>

@@ -2,7 +2,6 @@
 layout: lecture
 title: Feb 20th 2013 - LizardTech
 category: lectures
-
 excerpt: Feb 2013 CUGOS Monthly Meeting at LizardTech (6pm)
 ---
  

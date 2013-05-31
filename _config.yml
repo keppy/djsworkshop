@@ -30,7 +30,8 @@ pygments: true
 auto: false
 
 # Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
-permalink: pretty
+#permalink: pretty
+permalink: /:categories/:title
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.md]
