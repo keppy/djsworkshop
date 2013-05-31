@@ -9,16 +9,25 @@ title: Home
 
       <div class="row">
         <div class="span12">
-          <h2>Workshop Index</h2>
-{% for topic in site.categories.topics %}  
+          <h1>Workshop Index</h1>
+          <hr/>
+          <h3>Intro</h3>
           <ol>
+{% for topic in site.categories.intro_topics reversed %}  
               <li>
-              <div class="topic">
-                <h4><a href={{ topic.url }}>{{ topic.title }}</a></h4>
-              </div>
+              <h4><a href={{ topic.url }}>{{ topic.title }}</a></h4>
               </li>
-          </ol>
 {% endfor %}
+          </ol>
+          <hr/>
+          <h3>Lectures/Exercises</h3>
+          <ol>
+{% for topic in site.categories.lecture_topics reversed %}  
+              <li>
+              <h4><a href={{ topic.url }}>{{ topic.title }}</a></h4>
+              </li>
+{% endfor %}
+          </ol>
         </div> <!-- end span -->
       </div> <!-- end row -->
 
