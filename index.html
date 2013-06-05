@@ -28,10 +28,19 @@ title: Home
               </li>
 {% endfor %}
           </ol>
+          <hr/>
+          <h3>Outro</h3>
+          <ol>
+{% for topic in site.categories.outro_topics reversed %}  
+              <li>
+              <h4><a href={{ topic.url }}>{{ topic.title }}</a></h4>
+              </li>
+{% endfor %}
+          </ol>
         </div> <!-- end span -->
       </div> <!-- end row -->
 
       <br/>
       <div class="alert alert-info">
-        <h4><a style="color:black;" href="http://groups.google.com/group/djangoseattle">Sign up for the Django-Seattle (Google Group)</a></h4>
+        <h4><a style="color:black;" href="https://groups.google.com/forum/#!forum/django-seattle">Sign up for the Django-Seattle (Google Group)</a></h4>
       </div>

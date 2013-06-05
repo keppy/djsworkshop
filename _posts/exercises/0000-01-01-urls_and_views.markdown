@@ -4,5 +4,11 @@ title: Django Urls and Views
 category: exercises
 ---
 
-Blah Exercises
+### Excercise 1
+
+Type out your `urls.py` file
+
+### Exercise 2
+
+Type out yoru `views.py` files
 

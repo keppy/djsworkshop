@@ -1,0 +1,8 @@
+---
+layout: outro_topic 
+title: Takehome Points
+categories : 'outro_topics'
+permalink : /outro-topics/takehome
+---
+
+__Takehome Points __
