@@ -59,7 +59,7 @@ case it tells us that we can will have a page available here:
     # http://<domain-name>/<path>/
     http://djsworkshop.dev.osgeohacks.com/admin/
 
-Navigate to the url above and see the result
+Navigate to the url above and see the result [[2](http://www.cs.cmu.edu/afs/cs/usr/mwm/www/tutorial/url.html)]
 
 ### View Workflow
 
