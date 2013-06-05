@@ -1,14 +1,14 @@
 ---
 layout: exercise
-title: Django Urls and Views
+title: Django Templates
 category: exercises
 ---
 
 ### Excercise 1
 
-Type out your `urls.py` file
+blah and `stubbed`
 
 ### Exercise 2
 
-Type out yoru `views.py` files
+blah and `stubbed`
 
