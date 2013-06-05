@@ -3,8 +3,8 @@ layout: lecture_topic
 title: Django Project Setup and Config
 categories : 'lecture_topics'
 permalink : /lecture-topics/setup_and_config
-exercise_id : /exercises/setup_and_config
-lecture_id : /lectures/setup_and_config
+exercise_id : /exercises/setup_config
+lecture_id : /lectures/setup_config
 ---
 
 __Lecture__

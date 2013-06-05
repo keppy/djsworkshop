@@ -1,5 +1,5 @@
 ---
-layout: outro_topic
+layout: outro_topics
 title: Other Sources
 categories : 'outro_topics'
 permalink : /outro-topics/references

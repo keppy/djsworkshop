@@ -3,8 +3,8 @@ layout: lecture_topic
 title: Django Batteries Included
 categories : 'lecture_topics'
 permalink : /lecture-topics/batteries_included
-exercise_id : /exercises/batteries_included
-lecture_id : /lectures/batteries_included
+exercise_id : /exercises/batteries
+lecture_id : /lectures/batteries
 ---
 
 __Lecture__
