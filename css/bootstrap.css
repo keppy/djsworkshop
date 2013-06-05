@@ -6113,12 +6113,12 @@ a.badge:focus {
 .hero-unit {
   padding: 60px;
   margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 400;
   line-height: 31.5px;
   color: inherit;
   background-color: #eeeeee;
-  background-image: url(../image/base/pony.jpg);
+  background-image: url(../image/base/pony2.jpg);
   background-repeat: repeat-x;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -6128,6 +6128,7 @@ a.badge:focus {
 .hero-unit h1 {
   margin-bottom: 0;
   font-size: 60px;
+  font-weight: bold;
   line-height: 1;
   letter-spacing: -1px;
   color: #2d2d2d;
