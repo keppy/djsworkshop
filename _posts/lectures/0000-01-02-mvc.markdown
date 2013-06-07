@@ -8,4 +8,56 @@ category: lectures
 
 ### Django's Version of MVC
 
-blah blah
+Many different web frameworks implemented in different languages claim
+to be based on the Model-View-Controller (MVC) pattern. In practice 
+MVC is more of a concept that can is implementd differently by different tools.
+
+Addy Osmani, a JavaScript framework guru, has compared these variations to
+a jungle where there are only variations of a pattern he refers to as
+[MV*](http://coding.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/).
+
+This is a useful consideration when we think about Django because you can find many
+examples on the web where people argue whether Django is MVC, MVT, MVTC or *even* MTV.
+[[1](http://django-irc-logs.com/2012/mar/19/#441495)] [[2](https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)]
+
+For our purposes we want to understand what MVC is in general -- the 10,000-ft overview. 
+In practice we care about how these concepts are overlayed ontop of Django 
+and how we can code them. So let's start.
+
+### MVC -- The Overview
+
+<!-- this needs to be paraphrased because it is a direct quote OR we just block quote it -->
+<!-- https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names -- >
+* Models represent the domain-specific knowledge and data in an application. 
+Think of this as being a ‘type’ of data you can model — like a User, Photo or Note. 
+
+* Views describe the data that gets presented to the user. It’s not necessarily how 
+the data looks, but which data is presented. The view describes which data you see, 
+not how you see it. It’s a subtle distinction.  So, in our case, a “view” is the 
+Python function for a particular URL, because the function describes which data is 
+presented.  
+
+* Templates help us separate content from presentation – which is where templates come in. 
+In Django, a “view” describes which data is presented, but a view normally delegates 
+to a template, which describes how the data is presented.  
+
+* The Controller fits in where? In Django’s case, it’s probably the framework itself -- 
+the machinery that sends a request to the appropriate view, according to the 
+Django URL configuration. If you’re hungry for acronyms, you might say that Django 
+is a “MTV” framework – that is, “model”, “template”, and “view.” That 
+breakdown makes much more sense. At the end of the day, of course, it comes 
+down to getting stuff done. And, regardless of how things are named, 
+Django gets stuff done in a way that’s most logical to us.  
+
+### MVC -- The Practical Django View
+
+Django makes it easy to understand where the letters in MVC exist in Django --
+because the names are directly mapped to the filenames. 
+
+__Models are in the Models File__
+
+__Views are in the View File__
+
+__Templates are in the Templates Directory__
+
+
