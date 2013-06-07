@@ -11,7 +11,7 @@ def getPost(request, postSlug):
     post = Post.objects.filter(slug=postSlug)
 
     # Display specified post
-    return render_to_response('single.html', { 'posts':post}, context_instance=RequestContext(request))
+    return render_to_response('single.html', { 'posts':post } )
 
 def getCategory(request, categorySlug, selected_page=1):
     # Get specified category
