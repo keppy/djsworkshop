@@ -8,9 +8,9 @@ category: lectures
 
 ### Django's Version of MVC
 
-Many different web frameworks implemented in different languages claim
+Many different web frameworks ( implemented in different languages ) claim
 to be based on the Model-View-Controller (MVC) pattern. In practice 
-MVC is more of a concept that can is implementd differently by different tools.
+MVC is more of a concept that is implementd differently by different tools.
 
 Addy Osmani, a JavaScript framework guru, has compared these variations to
 a jungle where there are only variations of a pattern he refers to as
@@ -24,12 +24,14 @@ For our purposes we want to understand what MVC is in general -- the 10,000-ft o
 In practice we care about how these concepts are overlayed ontop of Django 
 and how we can code them. So let's start.
 
-### MVC -- The Overview
+### The Overview
 
-<!-- this needs to be paraphrased because it is a direct quote OR we just block quote it -->
-<!-- https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names -- >
+<!-- 
+ # this needs to be paraphrased because it is a direct quote OR we just block quote it 
+ https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names
+-->
 * Models represent the domain-specific knowledge and data in an application. 
-Think of this as being a ‘type’ of data you can model — like a User, Photo or Note. 
+Think of this as being a "type" of data you can model — like a User, Photo or Note. 
 
 * Views describe the data that gets presented to the user. It’s not necessarily how 
 the data looks, but which data is presented. The view describes which data you see, 
@@ -47,9 +49,9 @@ Django URL configuration. If you’re hungry for acronyms, you might say that Dj
 is a “MTV” framework – that is, “model”, “template”, and “view.” That 
 breakdown makes much more sense. At the end of the day, of course, it comes 
 down to getting stuff done. And, regardless of how things are named, 
-Django gets stuff done in a way that’s most logical to us.  
+Django gets stuff done in a way that’s most logical to us. [[3](https://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)]
 
-### MVC -- The Practical Django View
+### The Practical Django View
 
 Django makes it easy to understand where the letters in MVC exist in Django --
 because the names are directly mapped to the filenames. 

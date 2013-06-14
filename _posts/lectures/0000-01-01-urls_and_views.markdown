@@ -11,26 +11,30 @@ category: lectures
 A lot of server-side web development can be understood through the basic request and 
 response cycle. Client applications ( like a web browser ) make requests to a
 server. Code on the server handles that request and responds 
-with something -- a CSS file, HTML, or JSON.
+with something -- a CSS file, HTML, JSON.
 
 The code running on the server in our case is Python code and it lives
 inside a larger toolset called Django. A simple example of
-the request and response cycle in Django would be navigating to a URL in the
-web browser. Hitting this URL triggers a request to the server for a web page to be 
-displayed and the server -- specifically Django -- responds with that rendered web
+the request and response cycle in Django would be navigating to a URL ( such as
+`http://www.myblog./about/` ) in the browser's address bar. Hitting this 
+URL triggers a request to the server for a web page. Django responds with the rendered web
 page. [[1](https://docs.djangoproject.com/en/dev/ref/request-response/)]
 
+Here's that workflow broken down into slightly more technical steps for certain people.
 
-Here's that workflow broken down into slightly more technical terms:
+### Request Response Workflow
 
-**1.** Navigate to a specific URL -- `http://www.myblog./about/`
+**1.** Navigate to a specific URL -- `http://djsblog.dev.osgeohacks.com/`
 
-**2.** An HTTP GET request is sent to server
+**2.** An HTTP GET request is sent to server. We can visualize this GET request by 
+opening Firebug in Firefox or opening the Developer Tools in Chrome.
+![alt img name](../../image/base/GET_request.png)
 
 **3.** Django handles the request and creates a HttpRequest object 
-( it contians details about the request )
+( it contains details about the request )
 
-**4.** Django maps the requested URL pattern to a view and loads that view
+**4.** Django maps the requested URL pattern to a view and loads that view. It does 
+this by referring to our `urls.py` file. We will look at this step very soon.
 
 **5.** Since the HttpRequest object is passed into the view when it is loaded
 we can use it decide how we are going to handle any number of business logic
@@ -39,9 +43,12 @@ things
 **6.** When each view is done doing its specific processing it **must** return
 a response of type HttpResponse
 
-Understanding this cycle is the key.
+Read through these steps again. They are slightly abstract but make your 
+best effort to try and commit them to memory. Understanding this cycle is the key.
+The next two sections will walk through these steps individually.
 
 ### Urls and View Relationship
+__\*this following section will cover steps 3 and 4 from above\*__
 
 Open the `urls.py` file for our project located below:
 
@@ -62,6 +69,7 @@ case it tells us that we can will have a page available here:
 Navigate to the url above and see the result. [[2](http://www.cs.cmu.edu/afs/cs/usr/mwm/www/tutorial/url.html)]
 
 ### View Workflow
+__\*this following section will cover steps 5 and 6 from above\*__
 
 Now let's examine one view from the final project to understand the request and response
 workflow in detail.
