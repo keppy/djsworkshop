@@ -54,17 +54,29 @@ Open the `urls.py` file for our project located below:
 
     https://github.com/thebigspoon/djsworkshop/blob/master/project/djsblog/urls.py
 
+
+**MORE HERE ABOUT PARAMS TO URL FUNCTION**
+
 Looking at our `urls.py` file we get can an idea about what endpoints or pages our
 site will expose. For example, the line below tells us that we have an admin 
 page:
 
     url( r'^admin/', include( admin.site.urls ) ),
 
+
 URLs are nothing more than addresses for specific resources on the web. In this specific
 case it tells us that we can will have a page available here:
 
     # http://<domain-name>/<path>/
     http://djsworkshop.dev.osgeohacks.com/admin/
+
+Sometimes url definitions can be pretty ugly as in the case of this next one.
+
+**MORE HERE ABOUT NAMED PARAMS TO URL FUNCTION**
+
+**EXAMPLE FOR BLOG POST**
+
+com
 
 Navigate to the url above and see the result. [[2](http://www.cs.cmu.edu/afs/cs/usr/mwm/www/tutorial/url.html)]
 
