@@ -16,7 +16,7 @@ with something -- a CSS file, HTML, JSON.
 The code running on the server in our case is Python code and it lives
 inside a larger toolset called Django. A simple example of
 the request and response cycle in Django would be navigating to a URL ( such as
-`http://www.myblog./about/` ) in the browser's address bar. Hitting this 
+`http://djsblog.dev.osgeohacks.com/about/` ) in the browser's address bar. Hitting this 
 URL triggers a request to the server for a web page. Django responds with the rendered web
 page. [[1](https://docs.djangoproject.com/en/dev/ref/request-response/)]
 
@@ -68,7 +68,7 @@ URLs are nothing more than addresses for specific resources on the web. In this 
 case it tells us that we can will have a page available here:
 
     # http://<domain-name>/<path>/
-    http://djsworkshop.dev.osgeohacks.com/admin/
+    http://djsblog.dev.osgeohacks.com/admin/
 
 Sometimes url definitions can be pretty ugly as in the case of this next one.
 
@@ -100,7 +100,7 @@ Let's take a look at some of the code in the `views.py` file located at `/blogen
 
 
 The URL that points to this view ( it will trigger it to run ) can be found by 
-looking in setting app's `/djsblog/urls.py` file. Look for this line. This is the
+looking in setting blogs's `/djsblog/urls.py` file. Look for this line. This is the
 beginning of the request cycle:
 
     #
@@ -116,7 +116,10 @@ mathcing a year, month and post ID in the URL. The most important part of the
 URL above is `(?P<postSlug>[-a-zA-Z0-9]+)` which matches any number of 
 lowercase/uppercase alpha values and numbers at the end of the URL and passes it to
 the view function. The name `postSlug` is going to be matched
-in the view's function definition:
+in the view's function definition. `postSlug` is an arbitrary name. A slug
+is another name for an ID. We could name the variable whatever we wanted -- 
+for example, `junkmob`. But whatever we choose
+to name the variable should also be used in the view's function definition:
 
 
     def getPost(request, postSlug):
@@ -124,26 +127,30 @@ in the view's function definition:
 Without knowing anthying about what a view is we can piece together some crucial
 things about this workflow. The view function is passed a request object. 
 The request object contains a pile of information about what is happening. For example, 
-it contains informaiton about what type of HTTP method this view was request with ( ex. POST, 
+it contains informaiton about what type of HTTP method this view was requested with ( e.g. POST, 
 GET ). They also potentially have information about the user and their permissions.
 [[3](https://docs.djangoproject.com/en/dev/ref/request-response/#httprequest-objects)]
 
-The view function is also the variable name `postSlug` that we saw in URL. A slug
-is another name for an ID. We will use this ID to request information from
+The view module function `getPost` also has the variable name `postSlug` being
+passed in it's arguments. We saw that in URL above. We will 
+use this slug to request information from
 the database about a specific post, the one identified by the postSlug variable:
 
     # Get specified post
     post = Post.objects.filter(slug=postSlug)
 
-Let's ignore the syntax for now, since we are going to talk about Models and the ORM next. The above
-code gets a post from the database. It's just an object with attributes that map to the 
+Let's ignore the syntax for now, since we are going to talk about those concepts next. The above
+code gets a blog post from the database. It's just an object with attributes that map to the 
 database fields. 
 
 The last code statement in the view is the last step in the request/response cycle ( this is not
-really true, but for simplicity let's just assume this true ). This line of code
+really true, but for simplicity let's just assume this is true ). This line of code
 is taking the data we've packaged in the dictionary and passing it to a template to 
 be rendered ( more about this later ).
 
     # Display specified post
     return render_to_response( 'single.html', { 'posts':post } )
+
+
+
 
